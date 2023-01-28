@@ -4,8 +4,7 @@ class Credit implements Cloneable{
 	String cardholder;
 	Long cardnumber;
 	String expirydate;
-	Long card;
-	Credit(String cardholder,Long cardnumber,String expirydate,Long card)
+	Credit(String cardholder,Long cardnumber,String expirydate)
 	{
 		this.cardholder=cardholder;
 		this.cardnumber=cardnumber;
@@ -21,14 +20,9 @@ class Credit implements Cloneable{
 			return this;
 		}
 	}
-	void welcome() {
-		Boolean ans=cardnumber.equals(card);
-		if(ans==true) {
-			System.out.println("CardHolder:" +cardholder+ "     cardnumber:" +cardnumber+ "    expirydate:" +expirydate);
-		}
-		else {
-			System.out.println("Failed");
-		}
+	boolean helo(Long card)
+	{
+		return cardnumber.equals(card);
 	}
 }
 public class Card
@@ -39,14 +33,21 @@ public class Card
     {
         scan = new Scanner(System.in);
         System.out.println("Enter CardHolder Name");
-        String a=scan.next();
+        String cardholder=scan.next();
         System.out.println("Enter CardNumber");
-        Long b=scan.nextLong();
+        Long cardnumber=scan.nextLong();
         System.out.println("Enter ExpiryDate");
-        String c=scan.next();
+        String expirydate=scan.next();
         Long d=1234L;
-        Credit s1=new Credit(a,b,c,d);
+        Credit s1=new Credit(cardholder,carnumber,expirydate);
         Credit s2=s1.active();
-        s2.welcome();
+        System.out.println(s2.helo(d));
+	boolean ans=s2.helo(d);
+	if(ans==true) {
+			System.out.println("CardHolder:" +cardholder+ "     cardnumber:" +cardnumber+ "    expirydate:" +expirydate);
+		}
+		else {
+			System.out.println("Failed");
+		}
     }
 }
