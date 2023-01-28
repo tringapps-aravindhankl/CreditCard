@@ -43,7 +43,7 @@ public class Card
         Credit s2=s1.active();
         System.out.println(s2.helo(d));
 	boolean ans=s2.helo(d);
-	if(ans==true) {
+	if(cardnumber==card) {
 			System.out.println("CardHolder:" +cardholder+ "     cardnumber:" +cardnumber+ "    expirydate:" +expirydate);
 		}
 		else {
