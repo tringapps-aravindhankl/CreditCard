@@ -13,7 +13,7 @@ class Credit implements Cloneable{
 		this.expirydate=expirydate;
 		this.card=card;
 	}
-	Credit active() {
+	Credit clone() {
 		try{
 			return (Credit) super.clone();
 		}
@@ -43,7 +43,7 @@ public class Card
         String expirydate=scan.next();
         Long d=1234L;
         Credit s1=new Credit(cardholder,carnumber,expirydate);
-        Credit s2=s1.active();
+        Credit s2=s1.clone();
         log.info(s2.helo(d));
 	if(cardnumber==card) {
 			log.info("CardHolder:" +cardholder+ "     cardnumber:" +cardnumber+ "    expirydate:" +expirydate);
