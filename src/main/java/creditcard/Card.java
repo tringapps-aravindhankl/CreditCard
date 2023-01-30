@@ -33,7 +33,6 @@ public class Card
 
 	public static void main( String[] args )
     {
-	boolean ans;
 	Logger log=Logger.getLogger("hi");
         scan = new Scanner(System.in);
         log.info("Enter CardHolder Name");
@@ -46,7 +45,7 @@ public class Card
         Credit s1=new Credit(cardholder,carnumber,expirydate);
         Credit s2=s1.active();
         log.info(s2.helo(d));
-	ans=s2.helo(d);
+	boolean ans=s2.helo(d);
 	if(cardnumber==card) {
 			log.info("CardHolder:" +cardholder+ "     cardnumber:" +cardnumber+ "    expirydate:" +expirydate);
 		}
