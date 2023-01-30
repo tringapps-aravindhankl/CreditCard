@@ -1,9 +1,11 @@
 package creditcard;
-import java.util.*;
+import java.util.Scanner;
+import java.util.logger.*;
 class Credit implements Cloneable{
 	String cardholder;
 	Long cardnumber;
 	String expirydate;
+	Logger log=Logger.getLogger("hi");
 	Credit(String cardholder,Long cardnumber,String expirydate)
 	{
 		this.cardholder=cardholder;
@@ -16,7 +18,7 @@ class Credit implements Cloneable{
 			return (Credit) super.clone();
 		}
 		catch(Exception e) {
-			System.out.println("error");
+			log.info("error");
 			return this;
 		}
 	}
@@ -31,23 +33,24 @@ public class Card
 
 	public static void main( String[] args )
     {
+	Logger log=Logger.getLogger("hi");
         scan = new Scanner(System.in);
-        System.out.println("Enter CardHolder Name");
+        log.info("Enter CardHolder Name");
         String cardholder=scan.next();
-        System.out.println("Enter CardNumber");
+        log.info("Enter CardNumber");
         Long cardnumber=scan.nextLong();
-        System.out.println("Enter ExpiryDate");
+        log.info("Enter ExpiryDate");
         String expirydate=scan.next();
         Long d=1234L;
         Credit s1=new Credit(cardholder,carnumber,expirydate);
         Credit s2=s1.active();
-        System.out.println(s2.helo(d));
+        log.info(s2.helo(d));
 	boolean ans=s2.helo(d);
 	if(cardnumber==card) {
-			System.out.println("CardHolder:" +cardholder+ "     cardnumber:" +cardnumber+ "    expirydate:" +expirydate);
+			log.info("CardHolder:" +cardholder+ "     cardnumber:" +cardnumber+ "    expirydate:" +expirydate);
 		}
 		else {
-			System.out.println("Failed");
+			log.info("Failed");
 		}
     }
 }
