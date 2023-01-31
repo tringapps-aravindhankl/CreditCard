@@ -46,7 +46,7 @@ public class Card
         Credit s2=s1.active();
         log.info(s2.helo(d));
 	if(cardnumber==card) {
-			log.info("CardHolder:" +cardholder+ "     cardnumber:" +cardnumber+ "    expirydate:" +expirydate);
+			log.fine("CardHolder: {} + cardnumber: {}  expirydate: {} ",cardholder,cardnumber,expirydate);
 		}
 		else {
 			log.info("Failed");
