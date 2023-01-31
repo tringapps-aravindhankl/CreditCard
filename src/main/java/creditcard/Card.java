@@ -1,6 +1,6 @@
 package creditcard;
 import java.util.Scanner;
-import java.util.logger.*;
+import java.util.logging.*;
 class Credit implements cloneable{
 	String cardholder;
 	Long cardnumber;
