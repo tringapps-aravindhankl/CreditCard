@@ -11,7 +11,6 @@ class Credit implements cloneable{
 		this.cardholder=cardholder;
 		this.cardnumber=cardnumber;
 		this.expirydate=expirydate;
-		this.card=card;
 	}
 	Credit active() {
 		try{
