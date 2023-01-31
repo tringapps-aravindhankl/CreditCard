@@ -42,7 +42,7 @@ public class Card
         log.info("Enter ExpiryDate");
         String expirydate=scan.next();
         Long d=1234L;
-        Credit s1=new Credit(cardholder,carnumber,expirydate);
+        Credit s1=new Credit(cardholder,cardnumber,expirydate);
         Credit s2=s1.active();
         log.info(s2.helo(d));
 	if(cardnumber==card) {
