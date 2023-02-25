@@ -1,7 +1,7 @@
 package creditcard;
 import java.util.Scanner;
 import java.util.logging.*;
-class Credit implements cloneable{
+class Credit implements Cloneable{
 	String cardholder;
 	Long cardnumber;
 	String expirydate;
