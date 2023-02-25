@@ -1,7 +1,7 @@
 package creditcard;
 import java.util.Scanner;
 import java.util.logging.*;
-class Credit implements cloneable{
+class Credit implements Cloneable{
 	String cardholder;
 	Long cardnumber;
 	String expirydate;
@@ -40,15 +40,19 @@ public class Card
         Long cardnumber=scan.nextLong();
         log.info("Enter ExpiryDate");
         String expirydate=scan.next();
-        Long d=1234L;
+        Long card=(long) 1234;
         Credit s1=new Credit(cardholder,cardnumber,expirydate);
         Credit s2=s1.active();
-        log.info(s2.helo(d));
-	if(cardnumber==card) {
-			log.fine("CardHolder: {} + cardnumber: {}  expirydate: {} ",cardholder,cardnumber,expirydate);
-		}
-		else {
+        boolean ans=s2.helo(card);
+        log.log(Level.INFO,()->""+ans);
+   
+	if(cardnumber.equals(card)) {
+         log.log(Level.INFO,()->"CardHolder:"+cardholder);
+         log.log(Level.INFO,()->"CardNumber:"+cardnumber);
+         log.log(Level.INFO,()->"ExpiryDate:"+ expirydate);
+        }
+        else {
 			log.info("Failed");
 		}
-    }
+     }
 }
